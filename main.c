@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include "banner.h"
 
 #define _XTAL_FREQ 48000000
 
@@ -58,6 +59,8 @@ void main(void) {
     LATAbits.LA0 = 1;
     int cnt = 0;
     char str[100];
+    printf("%s\n\r", banner);
+    cnt = 0;
     printf("Please input an example string: ");
     read_line(str, 100);
     while (1) {
